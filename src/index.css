@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* ajouter toutes les fonts dans Fonts\Kaleko */
+@font-face {
+  font-family: 'Kaleko 105 Bold';
+  src: url('../public/Fonts/kaleko/Kaleko105Bold.ttf');
+
+  font-family: 'Kaleko 105 Bold Oblique';
+  src: url('../public/Fonts/kaleko/Kaleko105BoldOblique.ttf');
+
+  font-family: 'Kaleko 105 Book';
+  src: url('../public/Fonts/kaleko/Kaleko105Book.ttf');
+
+  font-family: 'Kaleko 105 Book Oblique';
+  src: url('../public/Fonts/kaleko/Kaleko105BookOblique.ttf');
+
+  font-family: 'Kaleko 105 Heavy';
+  src: url('../public/Fonts/kaleko/Kaleko105Heavy.ttf');
+
+  font-family: 'Kaleko 105 Heavy Oblique';
+  src: url('../public/Fonts/kaleko/Kaleko105HeavyOblique.ttf');
+
+  font-family: 'Kaleko 105 Light';
+  src: url('../public/Fonts/kaleko/Kaleko105Light.ttf');
+
+  font-family: 'Kaleko 105 Light Oblique';
+  src: url('../public/Fonts/kaleko/Kaleko105LightOblique.ttf');
+
+  font-family: 'Kaleko 105 Thin';
+  src: url('../public/Fonts/kaleko/Kaleko105Thin.ttf');
+}
+
+div{
+  font-family: 'Kaleko 105 Bold';
+}
