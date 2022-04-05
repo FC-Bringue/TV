@@ -2,10 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 
 
-function Body() {
+function Main() {
   return (
-    <div>Hello Body</div>
+    <div>Hello Main</div>
   );
 }
 
-export default Body;
+export default Main;

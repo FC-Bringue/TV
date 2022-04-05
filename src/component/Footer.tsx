@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
+import MusicPlayer from './MusicPlayer';
 
 
 function Footer() {
   return (
-    <div>Hello Footer</div>
+    <div className='MusicPlayerContainer'>
+        <MusicPlayer/>
+    </div>
   );
 }
 
