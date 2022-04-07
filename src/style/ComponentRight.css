@@ -1,0 +1,22 @@
+.CurrentMusic{
+    background-color: #F8F8F8;
+    width: 35%;
+    box-shadow: inset 0px 1px 53px 4px rgba(31, 31, 31, 0.25);
+border-radius: 65px;
+
+
+    
+}
+.CurentMusicCover{
+    width: 45px;
+    margin-left: 40%;
+}
+.played{
+    width: 40px;
+}
+.CurentMusicCoverParent{
+    margin-left: 5%;
+}
+.playedParent{
+    margin-right: 5%;
+}

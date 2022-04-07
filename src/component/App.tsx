@@ -4,6 +4,7 @@ import '../style/App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
+import CurrentMusic from './currentMusic';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       </header>
 
       <main>
-        <Main/>
+        <CurrentMusic/>
       </main>
 
       <footer className='fixed-bottom'>
