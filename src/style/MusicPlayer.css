@@ -4,7 +4,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background: rgb(57,51,52);
+    background: -moz-linear-gradient(180deg, rgba(57,51,52,1) 0%, rgba(118,123,153,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(57,51,52,1) 0%, rgba(118,123,153,1) 100%);
+    background: linear-gradient(180deg, rgba(57,51,52,1) 0%, rgba(118,123,153,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#393334",endColorstr="#767b99",GradientType=1);
 }
 .MusicPlayerContainer{
     width: 100%;
