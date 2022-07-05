@@ -2,9 +2,12 @@ import {
   DataEntity,
   UsersEntity,
 } from "../../helpers/propsType/TwitterResponse";
+import '../../style/App.css';
 
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { reduceEachLeadingCommentRange } from "typescript";
+import { Container, Row, Col } from 'react-bootstrap';
 type AppProps = {
   tweetData: DataEntity;
   userData: UsersEntity;
@@ -45,9 +48,10 @@ const Cellule = ({
         padding: "0.5em",
         minHeight: "20%",
         backgroundColor: "#232932",
+        translateY: "-2100px"
       }}
-      animate={{ y: -celluleHeight }}
-      transition={{ /* repeat: Infinity, ease: "easeInOut", */ duration: 25 }}
+      animate={{ y: celluleHeight }}
+      transition={{ /* repeat: Infinity, ease: "easeInOut", */ duration: 10, ease: "easeInOut" }}
       ref={celluleRef}
     >
       {userData && tweetData && (
@@ -57,22 +61,22 @@ const Cellule = ({
               <div>
                 <img
                   src={userData.profile_image_url}
-                  alt={"Photo de profil de " + userData.username}
+                  alt={"PDP"}
                   className="rounded-circle"
                 />
               </div>
               <div>
-                <p style={{ margin: "auto", marginLeft: "0.5em" }}>
+                <p style={{ margin: "auto", marginLeft: "0.5em", fontFamily:"Segoe UI", fontSize:"16px" }}>
                   {userData.name}
                 </p>
-                <p style={{ margin: "auto", marginLeft: "0.5em" }}>
+                <p style={{ margin: "auto", marginLeft: "0.5em", fontFamily:"Segoe UI", fontSize:"14px", color:"#b1b1b1" }}>
                   @{userData.username}
                 </p>
               </div>
             </div>
             <p>{getMinutesSinceNow(userData.created_at)}min</p>
           </div>
-          <p style={{ paddingTop: "0.5em", paddingBottom: "0.5em" }}>
+          <p style={{paddingTop: "0.5em", paddingBottom: "0.5em" }}>
             {tweetData.text}
           </p>
         </>
