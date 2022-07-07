@@ -1,12 +1,14 @@
-import React from 'react';
-import Overlaytwitter from './twitter/Overlaytwitter';
-import OverlayInstagram from './instagram/OverlayInstagram';
-
-
+import React from "react";
+import Overlaytwitter from "./twitter/Overlaytwitter";
+import OverlayInstagram from "./instagram/OverlayInstagram";
+import MusicList from "./MusicList/MusicList";
 
 function Main() {
   return (
-    <div><OverlayInstagram /></div>
+    <div id="TVMainContent">
+      <Overlaytwitter />
+      <MusicList />
+    </div>
   );
 }
 
