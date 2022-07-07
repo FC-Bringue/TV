@@ -13,14 +13,14 @@ type AppProps = {
   tweetData: any;
   userData: any;
   setCelluleHeight: any;
-  celluleHeight: any;
+  // celluleHeight: any;
 };
 
 const Cellule = ({
   tweetData,
   userData,
   setCelluleHeight,
-  celluleHeight,
+  // celluleHeight,
 }: AppProps) => {
   const celluleRef = useRef<HTMLDivElement>(null);
   /* console.log("Cellule", tweetData);
@@ -36,7 +36,7 @@ const Cellule = ({
   };
 
   useEffect(() => {
-    console.log("celluleHeightTwi", celluleHeight);
+    // console.log("celluleHeightTwi", celluleHeight);
     setCelluleHeight(celluleRef.current!.clientHeight);
   }, []);
 
@@ -52,7 +52,7 @@ const Cellule = ({
         backgroundColor: "#232932",
         translateY: "-2100px"
       }}
-      animate={{ y: celluleHeight }}
+      // animate={{ y: celluleHeight }}
       transition={{ /* repeat: Infinity, ease: "easeInOut", */ duration: 10, ease: "easeInOut" }}
       ref={celluleRef}
     >
