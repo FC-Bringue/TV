@@ -1,3 +1,4 @@
+export default
 {
     "message": "Test controller",
     "result": {
@@ -156,4 +157,4 @@
         "next_token": "b26v89c19zqg8o3fpz2m0svjnkm1udnygolj3dzlni1dp"
       }
     }
-  }
+  };

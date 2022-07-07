@@ -3,14 +3,15 @@ import {
   UsersEntity,
 } from "../../helpers/propsType/TwitterResponse";
 import '../../style/App.css';
+import '../../style/Twitter.css';
 
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { reduceEachLeadingCommentRange } from "typescript";
 import { Container, Row, Col } from 'react-bootstrap';
 type AppProps = {
-  tweetData: DataEntity;
-  userData: UsersEntity;
+  tweetData: any;
+  userData: any;
   setCelluleHeight: any;
   celluleHeight: any;
 };
@@ -40,6 +41,7 @@ const Cellule = ({
   }, []);
 
   return (
+    <>
     <motion.div
       className="celluleTwitter text-white d-flex flex-column"
       style={{
@@ -81,7 +83,8 @@ const Cellule = ({
           </p>
         </>
       )}
-    </motion.div>
+    </motion.div></>
+    
   );
 };
 

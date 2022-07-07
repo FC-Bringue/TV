@@ -4,23 +4,26 @@ import Cellule from "./Cellule";
 
 import { TwitterResponse } from "../../helpers/propsType/TwitterResponse";
 import { twi_response } from "../../helpers/sample/twitter";
+import { default as twitterjson } from '../../helpers/sample/twitter.json';
+import '../../style/Twitter.css';
 // import { twi_response } from "../../helpers/sample/twitter.json";
 
 const Overlaytwitter = () => {
-  const [getHashtag, setGetHashtag] = useState<TwitterResponse | null>(
-    twi_response
+  const [getHashtag, setGetHashtag] = useState<TwitterResponse | any>(
+    twitterjson
   );
 
-  const [celluleHeight, setCelluleHeight] = useState<number>(0);
+  const [celluleHeight, setCelluleHeight] = useState<number | any>(0);
 
   useEffect(() => {
-    setGetHashtag(twi_response);
+    setGetHashtag(twitterjson);
     console.log(getHashtag);
-  }, []);
+  }, []); 
 
   return (
+    <>
     <section
-      id="twitter-embedded"
+      className="twitter-embedded"
       style={{
         display: "flex",
         flexWrap: "wrap",
@@ -34,23 +37,35 @@ const Overlaytwitter = () => {
         borderRadius: "25px",
         padding: "0.5em",
       }}
-    >
-      {getHashtag &&
-        getHashtag.data!.map((item, index) => {
-          /* console.log("item", item);
-          console.log("index", index); */
-          const userData = getHashtag.includes.users![index];
-          return (
-            <Cellule
-              key={index}
-              tweetData={item}
-              userData={userData}
-              setCelluleHeight={setCelluleHeight}
-              celluleHeight={celluleHeight * (getHashtag.data!.length / 2)}
-            />
-          );
-        })}
-    </section>
+    ><div
+    className="head_twibox"
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      height: "3em",
+      overflowY: "hidden",
+      margin: "auto",
+      width: "100%",
+      justifyContent: "space-between",
+      background:"#000C19",
+      borderRadius: "25px",
+      padding: "0.5em",
+    }}><img className="twitter_logo" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png" width="35" height="35"></img>
+      <p className="head_twibox" style={{color:"white"}}>Current Feed:</p><p className="head_twibox">#ANTOINELEBG</p></div>
+
+      {getHashtag && getHashtag.result.data!.map((tweet: TwitterResponse, index:number, item:any) => {
+        const userData = getHashtag.result.includes.users.username;
+        return (
+        <Cellule
+        key={index}
+        tweetData={item}
+        userData={userData}
+        setCelluleHeight={setCelluleHeight}
+        // celluleHeight={celluleHeight * (getHashtag.data!.length / 2)} 
+        />
+      );
+    })}
+    </section></>
   );
 };
 
